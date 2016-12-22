@@ -15,8 +15,6 @@ RUN apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 5811
 
 RUN apt-get update && apt-get install docker-engine -y
 
-CMD ["service" "docker" "start"]
-
 RUN apt-get update && apt-get install -y git curl && rm -rf /var/lib/apt/lists/*
 
 ENV JENKINS_HOME /var/jenkins_home
